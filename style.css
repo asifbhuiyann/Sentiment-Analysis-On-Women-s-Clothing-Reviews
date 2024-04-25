@@ -1,0 +1,104 @@
+body, h1, h2, p, ul, li, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff69b4;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+h2{
+    color: #ff69b4;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.image-container {
+    width: calc(50% - 10px);
+    height: 600px; 
+}
+
+.image-container img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    border-radius: 8px;
+}
+
+.input-container {
+    width: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container input {
+    width: 60%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.evaluate-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.evaluate-btn:hover {
+    background-color: #d4418e;
+}
+
+footer {
+    background-color: #ff69b4;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+}
