@@ -42,6 +42,7 @@ nav ul li a:hover {
 h2{
     color: #ff69b4;
 }
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -74,6 +75,7 @@ h2{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    height: 40px;
 }
 
 .evaluate-btn {
