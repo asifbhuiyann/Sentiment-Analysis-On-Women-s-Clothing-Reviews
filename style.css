@@ -42,7 +42,14 @@ nav ul li a:hover {
 h2{
     color: #ff69b4;
 }
-
+#input{
+    height: 50px;
+    border-radius: .5rem;
+}
+#output{
+    height: 70px;
+    border-radius: .5rem;
+}
 .container {
     display: flex;
     justify-content: space-between;
