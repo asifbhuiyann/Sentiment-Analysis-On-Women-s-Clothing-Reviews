@@ -11,17 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Replace 'YOUR_API_URL' with the actual API endpoint.
+        // Replace api url here
         const apiUrl = "https://api.example.com/checkRecommendation";
+        const requestData = JSON.stringify({ review_text: reviewText });
 
         fetch(apiUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ review_text: reviewText }),
+            body: requestData,
         })
-            .then((response) => response.json())
+            .then((response) => response.json()) 
             .then((data) => {
                 if (data.recommended_ind) {
                     outputField.value = "Recommended";
