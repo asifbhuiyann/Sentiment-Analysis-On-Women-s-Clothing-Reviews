@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Replace api url here
-        const apiUrl = "https://api.example.com/checkRecommendation";
+        const apiUrl = "https://sawcrep-api.onrender.com/predict";
         const requestData = JSON.stringify({ review_text: reviewText });
 
         fetch(apiUrl, {
