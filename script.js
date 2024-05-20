@@ -8,6 +8,7 @@ document.querySelector(".evaluate-btn").addEventListener("click", () => {
         return; // Exit the function
     }
 
+<<<<<<< HEAD
     // If input text is not empty, proceed with API call
     fetch("https://sawcrep-api.onrender.com/predict", {
         method: "POST",
@@ -26,6 +27,23 @@ document.querySelector(".evaluate-btn").addEventListener("click", () => {
             } else {
                 alert("Unexpected Recommendation Value");
             }
+=======
+        if (reviewText === "") {
+            outputField.value = "Please Enter a Review First.";
+            return;
+        }
+
+        // Replace api url here
+        const apiUrl = "https://sawcrep-api.onrender.com/predict";
+        const requestData = JSON.stringify({ review_text: reviewText });
+
+        fetch(apiUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: requestData,
+>>>>>>> 30ae3980e26a7a2df46415f5feae108d09d42218
         })
         .catch((error) => {
             console.error("Error:", error);
