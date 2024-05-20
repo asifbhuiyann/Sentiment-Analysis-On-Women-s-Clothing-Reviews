@@ -4,46 +4,33 @@ document.querySelector(".evaluate-btn").addEventListener("click", () => {
 
     // Check if input text is empty
     if (inputText.trim() === "") {
-        outputBox.value = "Please Enter Review Text First";
+        outputBox.value = "Please enter review text first";
         return; // Exit the function
     }
 
-<<<<<<< HEAD
     // If input text is not empty, proceed with API call
     fetch("https://sawcrep-api.onrender.com/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            // Add any necessary headers here
         },
         body: JSON.stringify({ review_text: inputText }),
     })
         .then((response) => response.json())
         .then((data) => {
+            // Set output box value
             outputBox.value = data.recommended_ind;
+
+            // Check the value of recommended_ind and show corresponding alert
             if (data.recommended_ind === 0) {
                 alert("Product not recommended");
             } else if (data.recommended_ind === 1) {
-                alert("Product Recommended");
+                alert("Product recommended");
             } else {
-                alert("Unexpected Recommendation Value");
+                // Handle unexpected values
+                alert("Unexpected recommendation value");
             }
-=======
-        if (reviewText === "") {
-            outputField.value = "Please Enter a Review First.";
-            return;
-        }
-
-        // Replace api url here
-        const apiUrl = "https://sawcrep-api.onrender.com/predict";
-        const requestData = JSON.stringify({ review_text: reviewText });
-
-        fetch(apiUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: requestData,
->>>>>>> 30ae3980e26a7a2df46415f5feae108d09d42218
         })
         .catch((error) => {
             console.error("Error:", error);
