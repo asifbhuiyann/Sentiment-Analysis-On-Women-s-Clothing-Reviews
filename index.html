@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women's Clothing Reviews</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css"> 
 </head>
 <body>
     <header>
@@ -12,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" target="_blank">About</a></li>
+                <!-- <li><a href="about.html" target="_blank">About</a></li> -->
             </ul>
         </nav>
     </header>
@@ -25,12 +26,14 @@
             <h2 style="margin-top: 40px;">Provide Details</h2>
             <input type="text" id="input" placeholder="Write Review Text" spellcheck="false">
             <button type="button" class="evaluate-btn">Evaluate</button>
-            <input type="text" id="output" placeholder="Recommendation Will Appear Here">
         </div>
         <div class="image-container">
             <img src="img2.jpg" alt="Image 2">
         </div>
     </div>
+
+    <div id="popup-container"></div>
+
     <script src="script.js"></script>
     <footer>
         <p>&copy; Team Quantum Leap</p>
