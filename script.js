@@ -1,39 +1,62 @@
 document.querySelector(".evaluate-btn").addEventListener("click", () => {
     const inputText = document.getElementById("input").value;
-    const outputBox = document.getElementById("output");
 
-    // Check if input text is empty
     if (inputText.trim() === "") {
-        outputBox.value = "Please enter review text first";
-        return; // Exit the function
+        alert("Please enter review text first");
+        return;
     }
 
-    // If input text is not empty, proceed with API call
     fetch("https://sawcrep-api.onrender.com/predict", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            // Add any necessary headers here
         },
         body: JSON.stringify({ review_text: inputText }),
     })
         .then((response) => response.json())
         .then((data) => {
-            // Set output box value
-            outputBox.value = data.recommended_ind;
+            let popupContainer = document.getElementById("popup-container");
 
-            // Check the value of recommended_ind and show corresponding alert
-            if (data.recommended_ind === 0) {
-                alert("Product not recommended");
-            } else if (data.recommended_ind === 1) {
-                alert("Product recommended");
-            } else {
-                // Handle unexpected values
-                alert("Unexpected recommendation value");
-            }
+            fetch("popup.html")
+                .then((response) => response.text())
+                .then((html) => {
+                    popupContainer.innerHTML = html;
+
+                    let popupHeader = document.getElementById("popup-header");
+                    let popupImage = document.querySelector(".popup img");
+
+                    if (data.recommended_ind === 0) {
+                        popupHeader.innerText = "Product Not Recommended";
+                        popupImage.src = "cross.jpg";
+                    } else if (data.recommended_ind === 1) {
+                        popupHeader.innerText = "Product Recommended";
+                        popupImage.src = "404-tick.png";
+                    } else {
+                        popupHeader.innerText = "Unexpected Recommendation Value";
+                        popupImage.src = "404-tick.png";
+                    }
+
+                    openPopup();
+                })
+                .catch((error) => {
+                    console.error("Error loading popup:", error);
+                    alert(
+                        "An error occurred while loading the popup. Please try again later."
+                    );
+                });
         })
         .catch((error) => {
             console.error("Error:", error);
-            outputBox.value = "An error occurred. Please try again later.";
+            alert("An error occurred. Please try again later.");
         });
 });
+
+function openPopup() {
+    let popup = document.getElementById("popup");
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    let popup = document.getElementById("popup");
+    popup.classList.remove("open-popup");
+}
