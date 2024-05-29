@@ -4,39 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women's Clothing Reviews</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="popup.css"> 
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-    <header>
-        <h1>Sentiment Analysis On Women's Clothing Reviews</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <!-- <li><a href="about.html" target="_blank">About</a></li> -->
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <div class="image-container">
-            <img src="img1.jpg" alt="Image 1">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="landing.html">Women's Clothing Review</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#features">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#reviews">Reviews</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
+
+<div class="container text-center">
+    <div class="jumbotron mt-5">
+        <h1 class="display-4">Women's Clothing Review Analysis</h1>
+        <p class="lead">Your go-to place for honest reviews on the latest women's fashion.</p>
+        <hr class="my-4">
+        <p>Get started with finding the best outfits for you!</p>
+        <a class="btn btn-primary btn-lg get-started" href="homepage.html" role="button" target="_blank">Get Started</a>
+    </div>
+</div>
+
+<div class="container mt-5" id="features">
+    <h2 class="text-center mb-4">Why Choose Us?</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Latest Trends</h5>
+                    <p class="card-text">Stay updated with the latest fashion trends and styles.</p>
+                </div>
+            </div>
         </div>
-        <div class="input-container">
-            <h2 style="margin-top: 40px;">Provide Details</h2>
-            <input type="text" id="input" placeholder="Write Review Text" spellcheck="false">
-            <button type="button" class="evaluate-btn">Evaluate</button>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Honest Reviews</h5>
+                    <p class="card-text">Get honest opinions and reviews from real users.</p>
+                </div>
+            </div>
         </div>
-        <div class="image-container">
-            <img src="img2.jpg" alt="Image 2">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Top Brands</h5>
+                    <p class="card-text">Find reviews on top brands and their latest collections.</p>
+                </div>
+            </div>
         </div>
     </div>
+</div>
 
-    <div id="popup-container"></div>
+<div class="container mt-5" id="reviews">
+    <h2 class="text-center mb-4">Latest Reviews</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="review-card">
+                <h5 class="review-title">Amazing Summer Dress</h5>
+                <p class="review-text">I absolutely love this dress! It's perfect for the summer and fits perfectly. The material is light and breathable.</p>
+                <p class="review-author">- Tamim Shadman</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="review-card">
+                <h5 class="review-title">Comfortable Tops</h5>
+                <p class="review-text">These tops are the most comfortable ones I've ever owned. They fit well and the fabric is very durable.</p>
+                <p class="review-author">- Rudro Mozumdar</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="script.js"></script>
-    <footer>
-        <p>&copy; Team Quantum Leap</p>
-    </footer>
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Women's Clothing Reviews</h5>
+                <p>Discover the latest trends, read honest reviews, and find the best outfits for you.</p>
+            </div>
+            <!-- <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <p>Email: </p>
+                <p>Phone: </p>
+            </div> -->
+        </div>
+    </div>
+    <div class="text-center p-3">
+        © 2024 Team Quantum Leap
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
